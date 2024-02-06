@@ -9,6 +9,8 @@ readme = "README.md"
 python = "^3.8"
 flask = "^3.0.2"
 
+[tool.poetry.scripts]
+start = "app.main:app.run"
 
 [build-system]
 requires = ["poetry-core"]
