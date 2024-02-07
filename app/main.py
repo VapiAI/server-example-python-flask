@@ -1,11 +1,11 @@
 import os
 from flask import Flask
-# from your_blueprint import your_blueprint  # Replace with your actual blueprint import
+from .api import api as api_blueprint
 
 app = Flask(__name__)
 
 # Register Blueprints
-# app.register_blueprint(your_blueprint, url_prefix='/your_prefix')  # Replace with your actual blueprint and prefix
+app.register_blueprint(api_blueprint, url_prefix='/api')
 
 # Define routes
 @app.route('/')
