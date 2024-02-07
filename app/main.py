@@ -1,8 +1,12 @@
 import os
-from flask import Flask
+import logging
+from flask import Flask, request
 from .api import api as api_blueprint
 
 app = Flask(__name__)
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
 # Register Blueprints
 app.register_blueprint(api_blueprint, url_prefix='/api')
@@ -14,4 +18,4 @@ def index():
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))  # Get port from environment variable or fallback to 5000
-    app.run(port=port)
+    app.run(port=port, debug=True)
