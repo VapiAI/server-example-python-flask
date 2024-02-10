@@ -8,9 +8,10 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.8"
 flask = "^3.0.2"
+openai = "^1.11.1"
+flask-cors = "^4.0.0"
+python-dotenv = "^1.0.1"
 
-[tool.poetry.scripts]
-start = "app.main:app.run"
 
 [build-system]
 requires = ["poetry-core"]
