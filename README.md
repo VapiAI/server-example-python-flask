@@ -37,7 +37,7 @@ Replace <your_weather_api_key_here>, <your_openai_api_key_here>, and <your_vapi_
 To run the project, use Poetry to handle the environment:
 
   ```bash
-  poetry run flask run
+  poetry run flask --app ./app/main run 
   ```
 
 This command starts the Flask server on http://127.0.0.1:5000/. You can access the server from your web browser at this address.
